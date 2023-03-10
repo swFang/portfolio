@@ -1,0 +1,12 @@
+.card {
+  border-radius: 1em;
+  background: white !important;
+  padding: 24px 50px;
+  text-size-adjust: auto;
+  color: black !important;
+}
+.card p {
+  padding-top: 1rem;
+  line-height: 150%;
+  font-size: 14px;
+}

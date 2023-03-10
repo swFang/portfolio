@@ -1,0 +1,45 @@
+.landing-page {
+  margin: auto;
+  vertical-align: middle;
+  background-color: #101315;
+}
+
+.experience-page {
+  margin: auto;
+  vertical-align: middle;
+  height: 100vh !important;
+  background: linear-gradient(to right, #2c5364, #203a43);
+}
+
+.extras-page {
+  margin: auto;
+  vertical-align: middle;
+  background-color: rgb(36, 199, 138);
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-text {
+  padding-top: 40vh;
+  font-family: Oswald;
+  font-size: 100px;
+}
+
+.title-subtext {
+  margin-top: 30px;
+}
+
+.page-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
