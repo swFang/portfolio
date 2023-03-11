@@ -24,22 +24,77 @@
 }
 
 .title-text {
-  padding-top: 40vh;
+  padding-left: 10vw;
   font-family: Oswald;
-  font-size: 100px;
+  font-size: 150px;
+}
+
+.title-container {
+  padding-top: 30vh;
+  display: flex;
+  align-items: flex-end;
 }
 
 .title-subtext {
-  margin-top: 30px;
+  padding-bottom: 20px;
+  padding-left: 40px;
 }
 
-.page-container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
+.title-subtext-2 {
+  flex-grow: 1;
+  padding-bottom: 20px;
+  padding-right: 10vw;
+  text-align: right;
 }
 
-.section {
-  height: 100vh;
-  scroll-snap-align: start;
+.tile-large {
+  aspect-ratio: 16/9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #f3f0e0;
+}
+
+.tile-container {
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+}
+
+.product-img {
+  object-fit: contain;
+  max-height: 80%;
+  max-width: 70%;
+}
+
+.tile-side {
+  font-size: 35px;
+  color: #101315;
+  vertical-align: top;
+  width: 20%;
+}
+
+.tile-right {
+  margin-left: auto;
+  margin-right: 35px;
+}
+
+.tile-left-top {
+  margin-left: 35px;
+  margin-right: auto;
+}
+
+.tile-left-bottom {
+  margin-left: 35px;
+  margin-right: auto;
+  font-size: 14px;
+}
+
+.card-side-container {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
 }

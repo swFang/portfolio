@@ -1,18 +1,16 @@
 
-import LandingPage from './components/LandingPage';
+
 import React from 'react';
 
 import './styles.css'
-import WorkExperience from './components/WorkExperience';
-import Extras from './components/Extras';
+import LandingPage2 from './components/LandingPage2';
 
-function App() {
+const App = () => {
 
   return (
     <div className='page-container'>
-      <LandingPage />
-      <WorkExperience />
-      <Extras />
+      <LandingPage2 />
+
     </div>
   )
 }
