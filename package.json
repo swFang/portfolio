@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
+  "homepage": "https://swfang.github.io/portfolio",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
@@ -19,6 +20,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "portfolio -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -44,6 +47,7 @@
     ]
   },
   "devDependencies": {
-    "eslint-config-prettier": "^8.7.0"
+    "eslint-config-prettier": "^8.7.0",
+    "gh-pages": "^5.0.0"
   }
 }
