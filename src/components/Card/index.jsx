@@ -92,7 +92,7 @@ const Card = ({ left, leftBottom, path, skillList, achievements }) => {
         </motion.div>
       </div>
       {
-        <Modal open={isMobile && selected} footer={null}>
+        <Modal open={isMobile() && selected} footer={null}>
           <div>
             <SkillsList skills={skillList} />
             <Divider />
@@ -100,7 +100,7 @@ const Card = ({ left, leftBottom, path, skillList, achievements }) => {
           </div>
         </Modal>
       }
-      {!selected || (selected && isMobile) ? (
+      {!selected || (selected && isMobile()) ? (
         <img
           className='product-img'
           src={path}

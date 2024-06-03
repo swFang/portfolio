@@ -38,7 +38,7 @@ const SmallCard = ({ top, bottom, path, achievements, skills }) => {
   const isInView = useInView(ref, { amount: 0.75 });
 
   const initialValues = { opacity: 0, y: 25 };
-  const isMobile = (window.mobileCheck = function () {
+  const isMobile = (window.mobileCheck = () => {
     let check = false;
     (function (a) {
       if (
@@ -74,30 +74,31 @@ const SmallCard = ({ top, bottom, path, achievements, skills }) => {
         className='tile-small-top tile-small-text'
       >
         {top ?? <></>}
-        {!selected || (selected && isMobile) ? (
-          <img
-            style={{ width: "40%" }}
-            className='product-img'
-            src={path}
-            alt='SAP Software Analytics Cloud'
-          />
-        ) : (
+        {selected && !isMobile() && (
           <div style={{ marginTop: "30px" }}>
             <SkillsList skills={skills ?? []} />
             <div style={{ marginBottom: "12px" }} />
             <AchievementsList achievements={achievements ?? []} />
           </div>
         )}
-        {
-          <Modal open={isMobile && selected} footer={null}>
-            <div>
-              <SkillsList skills={skills ?? []} />
-              <div style={{ marginBottom: "12px" }} />
-              <AchievementsList achievements={achievements ?? []} />
-            </div>
-          </Modal>
-        }
       </motion.div>
+      {(!selected || (selected && isMobile())) && (
+        <img
+          style={{ width: "40%" }}
+          className='product-img'
+          src={path}
+          alt='SAP Software Analytics Cloud'
+        />
+      )}
+      {
+        <Modal open={isMobile() && selected} footer={null}>
+          <div>
+            <SkillsList skills={skills ?? []} />
+            <div style={{ marginBottom: "12px" }} />
+            <AchievementsList achievements={achievements ?? []} />
+          </div>
+        </Modal>
+      }
       <motion.div
         ref={ref}
         initial={initialValues}
