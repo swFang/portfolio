@@ -6,8 +6,7 @@ import Card from "../Card";
 import Navbar from "../Navbar";
 import SmallCard from "../SmallCard";
 
-const title = "Fang _";
-const subtext = "03. 09. 2023";
+const SUBTITLE = "03. 09. 2023";
 
 const LandingPage2 = () => {
   const [selectedModal, setSelectedModal] = useState(undefined);
@@ -53,7 +52,7 @@ const LandingPage2 = () => {
             <Col push={4} span={16}>
               <div style={{ display: "flex" }} className='title-container'>
                 <div className='title-text'>Fang _</div>
-                <div className='title-subtext'>{subtext}</div>
+                <div className='title-subtext'>{SUBTITLE}</div>
                 <div className='title-subtext-2'>v0.01</div>
               </div>
             </Col>
@@ -73,7 +72,8 @@ const LandingPage2 = () => {
                 { label: "Cypress" },
               ]}
               achievements={[
-                "Led a team to redesign and develop policy creation workflow for DMF",
+                "Spearheaded a small team in policy creation workflow redesign for DMF",
+                "Worked extensively with UX and QA teams to ensure features were shipped with quality and accuracy",
                 "Feature development: Login/Logout migration to React, Users, Groups, RBAC, SPAN... etc",
                 "Upgraded cypress testing environment to include virtual switches with internal APIs to better test depth",
                 // "Migrated login/logout functionality to React",
